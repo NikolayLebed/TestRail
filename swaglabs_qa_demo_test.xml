@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S9</id>
+	<name>Master</name>
+	<description>Demo test cases for Swag Labs store</description>
+	<sections>
+		<section>
+		<name>SwagLabs Test Cases</name>
+		<description>Non-functional Testing
+
+
+https://www.saucedemo.com/</description>
+						<cases>
+												<case>
+				<id>C2367</id>
+				<title>Does the page load</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2370</id>
+				<title>Does the logo exist</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references>TEST -191675</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>Given: User has navigated to &quot;https://www.saucedemo.com&quot;</content><expected>The page should be opened (load )</expected></step>
+<step>
+<index>2</index><content>When: User looks for logo  ![](index.php?/attachments/get/035b7d40-3de1-46e4-a6ad-3e02bbe59649) </content><expected>Logo should be on the page</expected></step>
+<step>
+<index>3</index><content>Then:The logo should be visible </content><expected>The logo should be visible at the top center of the page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2372</id>
+				<title>Does username input appears</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2373</id>
+				<title>Does password input appears</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2371</id>
+				<title>Does we have login button</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>Login Page</name>
+		<description>Functional testing</description>
+										<sections>
+		<section>
+		<name>Positive Test Cases</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C2365</id>
+				<title>Login with valid email and password</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references>TEST-19128</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Jira: &quot;https://testbase.atlassian.net/browse/TEST-19128&quot;
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given:I am on the login page &quot;https://www.saucedemo.com/&quot;</content><expected></expected></step>
+<step>
+<index>2</index><content>When:I fill in username with &quot;standard_user&quot; </content><expected></expected></step>
+<step>
+<index>3</index><content>And:I fill in password. with &quot;secret_sauce&quot; </content><expected></expected></step>
+<step>
+<index>4</index><content>And:I press Login  </content><expected></expected></step>
+<step>
+<index>5</index><content>Then:I see products list </content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Negative Test Cases</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C2366</id>
+				<title>Login with locked credentials</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references>TEST-19128</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Username: standard_user
+
+Password: secret_sauce
+
+Site: https://www.saucedemo.com/&quot;
+
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given:I am on the login page &quot;https://www.saucedemo.com/&quot;
+
+</content><expected></expected></step>
+<step>
+<index>2</index><content>When:I fill in username with &quot;standard_user&quot;</content><expected></expected></step>
+<step>
+<index>3</index><content>And:I fill in password. with &quot;secret_sauce&quot;</content><expected></expected></step>
+<step>
+<index>4</index><content>And:I press Login  </content><expected></expected></step>
+<step>
+<index>5</index><content>Then: Error message appears  ![](index.php?/attachments/get/8f5402ee-db50-406a-a267-7899e525fb7e) </content><expected>I see products list</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2369</id>
+				<title>Login with wrong credentials</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>DropDown Menu</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C2379</id>
+				<title>Does the dropdown exist</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references>TEST-19130</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site: https://www.saucedemo.com/
+
+Username: problem_user
+
+Password: secret_sauce
+
+Jira Ticket: https://testbase.atlassian.net/browse/TEST-19130
+
+
+
+
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User log in succesfully with valid username and password</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User looks at he top right corner </content><expected></expected></step>
+<step>
+<index>3</index><content>Then: User should be able to see a dropdown menu:  ![](index.php?/attachments/get/8e88dfa7-fea0-40ea-a107-9bdf9223419d) </content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2374</id>
+				<title>Does it contain all4 options</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site: https://www.saucedemo.com/
+
+Username: problem_user
+
+Password: secret_sauce
+
+Jira Ticket: Test 191-06
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User log in succesfully with valid username and password
+</content><expected></expected></step>
+<step>
+<index>2</index><content>And:  User can see at the top right corner dropdown menu</content><expected></expected></step>
+<step>
+<index>3</index><content>When:  He clicks to filter button </content><expected></expected></step>
+<step>
+<index>4</index><content>Then: 4 oprions should appears</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2375</id>
+				<title>Sort by name A-Z</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate>300</estimate>
+																								<references>TEST-19131</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site: https://www.saucedemo.com/
+
+Username: problem_user
+
+Password: secret_sauce
+
+Jira Ticket: https://testbase.atlassian.net/browse/TEST-19131
+
+Notion Bug Report template:  https://warm-archeology-548.notion.site/Bug-Report-SwagLabs-1e89d991ffcb4604af14cdc4e6830788
+
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User log in succesfully with valid username and password
+
+</content><expected></expected></step>
+<step>
+<index>2</index><content>And:  User can see at the top right corner dropdown menu</content><expected></expected></step>
+<step>
+<index>3</index><content>And: He clicks to filter button
+</content><expected></expected></step>
+<step>
+<index>4</index><content>And:  4 options appears</content><expected></expected></step>
+<step>
+<index>5</index><content>When: User click Sort by name A-Z</content><expected></expected></step>
+<step>
+<index>6</index><content>Then: The items in the list should be sorted alphabetically</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2376</id>
+				<title>Sort by name Z-A</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site: https://www.saucedemo.com/
+
+Username: problem_user
+
+Password: secret_sauce
+
+Jira Ticket: 
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: Name Z -A exists</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User click on thius option
+</content><expected></expected></step>
+<step>
+<index>3</index><content>Then: Items in the menu should be sorted alphabetically in descending order</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2377</id>
+				<title>Sort by Price High-Low</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2378</id>
+				<title>Sort by Price Low-High</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+	</sections>
+</suite>
