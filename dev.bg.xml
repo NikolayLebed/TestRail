@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S3</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Dev.bg</name>
+		<description>Main tasks:
+
+1. Write test cases for &quot;https://dev.bg/company/jobs/quality-assurance/&quot;
+
+2. Write test cases and collections for API end-points 
+
+3. Write test cases for &quot;Log in and Create new user&quot;
+
+
+Check-list for site: https://goo.su/6BU5MwV
+
+Postman collection: https://goo.su/pKfCs</description>
+										<sections>
+		<section>
+		<name>Main page Basic testing</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C31</id>
+				<title>Does the page load</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references>jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>Given: User have a device with a web browser installed</content><expected></expected></step>
+<step>
+<index>2</index><content>And: have a stable internet connection </content><expected></expected></step>
+<step>
+<index>3</index><content>When: enter the URL &apos;https://dev.bg/ &apos; in the address bar </content><expected></expected></step>
+<step>
+<index>4</index><content>And: press the Enter key</content><expected></expected></step>
+<step>
+<index>5</index><content>Then: the web page should load completely without any errors</content><expected></expected></step>
+<step>
+<index>6</index><content>And: all the contents of the web page (text, images, videos, etc.) should be displayed properly</content><expected></expected></step>
+<step>
+<index>7</index><content>And: the loading time of the web page should be within an acceptable range</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C32</id>
+				<title>Does the logo exist</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references>Jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>   </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has navigated to &apos;https://dev.bg/&apos;</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User looks for logo  ![](index.php?/attachments/get/c03a0cfd-286c-4649-b7d0-8123434275b1) </content><expected></expected></step>
+<step>
+<index>3</index><content>Then:The logo should be visible </content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C33</id>
+				<title>Does we have login button</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references>JIRA TICKET</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>Given: User has navigated to &apos;https://dev.bg/&apos;</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User looks for log in button </content><expected></expected></step>
+<step>
+<index>3</index><content>Then:The log in button should be visible </content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>Log In</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C56</id>
+				<title>Log in with valid credentials</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references>jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds> Valid credentials:</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given:I am on the login page &quot;https://dev.bg&quot;</content><expected></expected></step>
+<step>
+<index>2</index><content>When: user fill in username with valid credentials</content><expected></expected></step>
+<step>
+<index>3</index><content>And: user fill in password with valid credentials </content><expected></expected></step>
+<step>
+<index>4</index><content>And:user press Login  </content><expected></expected></step>
+<step>
+<index>5</index><content>Then:The user should be redirected to the application&apos;s home page.</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C57</id>
+				<title>Log in with invalid credentials</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references>jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>Given:I am on the login page &quot;https://dev.bg&quot;</content><expected></expected></step>
+<step>
+<index>2</index><content>	
+When: user fill in username with invalid credentials</content><expected></expected></step>
+<step>
+<index>3</index><content>	
+And: user fill in password with invalid credentials</content><expected></expected></step>
+<step>
+<index>4</index><content>And:user press Login  </content><expected></expected></step>
+<step>
+<index>5</index><content>Then:The error message should appear</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>QA Jobs page</name>
+		<description>https://dev.bg/company/jobs/quality-assurance/</description>
+										<sections>
+		<section>
+		<name>Workplace filter</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C34</id>
+				<title>Does drop-down menu work correctly</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C35</id>
+				<title>Does filter  &apos;Sofia&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C44</id>
+				<title>Does filter  &apos;Remote&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C45</id>
+				<title>Does filter  &apos;Varna&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C46</id>
+				<title>Does filter  &apos;Plovdiv&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Seniority Filter</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C36</id>
+				<title>Does filter &apos;Junior&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C40</id>
+				<title>Does filter &apos;1-2 years&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C41</id>
+				<title>Does filter &apos;2-5 years&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C42</id>
+				<title>Does filter &apos;5+ years&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C43</id>
+				<title>Does filter &apos;Team Lead&apos; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Job postings with salary information</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C37</id>
+				<title>Does filter works correctly</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Paid vacation filter</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C38</id>
+				<title>Does filter &quot;20 days&quot; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C49</id>
+				<title>Does filter &quot;21 - 25 days&quot; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C48</id>
+				<title>Does filter &quot;25 + days&quot; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Team size filter</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C39</id>
+				<title>Does filter &quot;20 days&quot; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C47</id>
+				<title>Does filter &quot;21 - 25 days&quot; works</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>API end - points</name>
+		<description>Postman collection (zDev): https://goo.su/pKfCs</description>
+						<cases>
+												<case>
+				<id>C50</id>
+				<title>Job location</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references>jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Bug report: https://goo.su/6BU5MwV </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: we have access to Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: user sents POST request to: &apos;https://dev.bg/company/jobs/quality-assurance/?_job_location=plo&apos;</content><expected></expected></step>
+<step>
+<index>3</index><content>Then: An error should occur, and the status code should not be 200 </content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C51</id>
+				<title>Job location Plovdiv</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references>jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Buig report: https://goo.su/6BU5MwV </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: we have access to Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: user sents POST request to: &apos;https://dev.bg/company/jobs/quality-assurance/?_job_location=plovdiv&apos;</content><expected></expected></step>
+<step>
+<index>3</index><content>Then: the status code should  be 200 </content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C52</id>
+				<title>quality-assurance</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references>jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>	
+Given: we have access to Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: user sents POST request to: &apos;https://dev.bg/company/jobs/quality-assurance&apos;</content><expected></expected></step>
+<step>
+<index>3</index><content>Then: the status code should  be 200</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C53</id>
+				<title>locale user</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references>jira ticket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>Given: we have access to Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: user sents GET request to: &apos;https://dev.bg/wp-json/contact-form-7/v1/contact-forms/7860/refill?_locale=user&apos;</content><expected></expected></step>
+<step>
+<index>3</index><content>Then: the status code should  be 200</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C54</id>
+				<title>salary</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C55</id>
+				<title>seniority</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+	</sections>
+</suite>
