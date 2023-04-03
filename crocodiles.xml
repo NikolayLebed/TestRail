@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S10</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Test cases - crocodiles</name>
+		<description>Test cases for: https://test-api.k6.io
+
+Postman collection:  http://bit.ly/3ZZR1RN</description>
+										<sections>
+		<section>
+		<name>List all public crocodiles ENDPOINT</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C2380</id>
+				<title>Get all public crocodiles.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references>JIra1546</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Access to Postman  </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/public/crocodiles/&apos; in Postman </content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes GET request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>Then:  User should receive list of all public crocodiles 
+
+[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Bert&quot;,
+        &quot;sex&quot;: &quot;M&quot;,
+        &quot;date_of_birth&quot;: &quot;2010-06-27&quot;,
+        &quot;age&quot;: 12
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Ed&quot;,
+        &quot;sex&quot;: &quot;M&quot;,
+        &quot;date_of_birth&quot;: &quot;1995-02-27&quot;,
+        &quot;age&quot;: 28
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Lyle the Crocodile&quot;,
+        &quot;sex&quot;: &quot;M&quot;,
+        &quot;date_of_birth&quot;: &quot;1985-03-03&quot;,
+        &quot;age&quot;: 38
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Solomon&quot;,
+        &quot;sex&quot;: &quot;M&quot;,
+        &quot;date_of_birth&quot;: &quot;1993-12-25&quot;,
+        &quot;age&quot;: 29
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;The gharial&quot;,
+        &quot;sex&quot;: &quot;F&quot;,
+        &quot;date_of_birth&quot;: &quot;2004-06-28&quot;,
+        &quot;age&quot;: 18
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Sang Buaya&quot;,
+        &quot;sex&quot;: &quot;F&quot;,
+        &quot;date_of_birth&quot;: &quot;2006-01-28&quot;,
+        &quot;age&quot;: 17
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;name&quot;: &quot;Sobek&quot;,
+        &quot;sex&quot;: &quot;F&quot;,
+        &quot;date_of_birth&quot;: &quot;1854-09-02&quot;,
+        &quot;age&quot;: 168
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;name&quot;: &quot;Curious George&quot;,
+        &quot;sex&quot;: &quot;M&quot;,
+        &quot;date_of_birth&quot;: &quot;1981-01-03&quot;,
+        &quot;age&quot;: 42
+    }
+]
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2394</id>
+				<title>Check response code</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references>JIra1546</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Access to Postman  </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/public/crocodiles/&apos; in Postman </content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes GET request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>Then:  User should receive response code 200  
+
+![](index.php?/attachments/get/74a41c08-05ad-4066-8728-e8302ae2fbf3) 
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2395</id>
+				<title>Check response time</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references>JIra1546</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Access to Postman  </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/public/crocodiles/&apos; in Postman </content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes GET request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>Then:  User should receive response time below 800 ms. 
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2396</id>
+				<title>Check Delete method</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references>JIra1546</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Access to Postman  </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/public/crocodiles/&apos; in Postman </content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes DELETE request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>Then:  User should receive response:
+
+{
+    &quot;detail&quot;: &quot;Method \&quot;DELETE\&quot; not allowed.&quot;
+}
+
+
+</content><expected></expected></step>
+<step>
+<index>4</index><content>And: Response code should be 405Method Not Allowed
+
+ ![](index.php?/attachments/get/db6fddd7-30e2-496e-83ec-87c2f452d6a0) 
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Get a single public crocodile</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C2393</id>
+				<title>Get a single public crocodile</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references>JIra1544</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Access to Postman  </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/public/crocodiles/{id}/&apos; in Postman </content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes GET request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>Then:  User should receive a single crocodile:
+
+{
+    &quot;id&quot;: 5,
+    &quot;name&quot;: &quot;The gharial&quot;,
+    &quot;sex&quot;: &quot;F&quot;,
+    &quot;date_of_birth&quot;: &quot;2004-06-28&quot;,
+    &quot;age&quot;: 18
+}
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Registration and authentication</name>
+		<description>Method:  POST
+
+https://test-api.k6.io/</description>
+						<cases>
+												<case>
+				<id>C2382</id>
+				<title>Register a new user</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>600</estimate>
+																								<references>JiraTicket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Access to Postman </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/user/register/&apos; in Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes POST request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>And: User attaches a body of JSON with the future credentials:
+
+{
+    &quot;username&quot;:
+        &quot;string&quot;
+    ,
+    &quot;password&quot;:
+        &quot;string&quot;
+
+}</content><expected></expected></step>
+<step>
+<index>4</index><content>Then:  User should receive a success message:
+
+{
+    &quot;username&quot;: &quot;&quot;,
+    &quot;first_name&quot;: &quot;&quot;,
+    &quot;last_name&quot;: &quot;&quot;,
+    &quot;email&quot;: &quot;&quot;
+}
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2383</id>
+				<title>Cookie/Session based authentication login.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>600</estimate>
+																								<references>JiraTicket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Access to Postman and https://test-api.k6.io</preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/auth/cookie/login/&apos; in Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes POST request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>Then: User should receive message with valid logins status
+
+{
+    &quot;id&quot;: ,
+    &quot;username&quot;: &quot; &quot;,
+    &quot;first_name&quot;: &quot; &quot;,
+    &quot;last_name&quot;: &quot; &quot;,
+    &quot;email&quot;: &quot; &quot;,
+    &quot;date_joined&quot;: &quot; &quot;
+}
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2384</id>
+				<title>Cookie/Session logout.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>600</estimate>
+																								<references>JiraTicket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds> </preconds>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/auth/cookie/login/&apos; in Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes POST request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>Then: User should receive message with number 1</content><expected></expected></step>
+<step>
+<index>4</index><content>And: User should receive response status 200  ![](index.php?/attachments/get/57bb77d6-12dc-4f3c-bcde-c1ab93092621) </content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2385</id>
+				<title>HTTP basic-auth login.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references>JiraTicket</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/auth/cookie/login/&apos; in Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes POST request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>And: User attaches a body of JSON  with the actual credentials:
+
+{
+    &quot;username&quot;:
+        &quot;string&quot;
+    ,
+    &quot;password&quot;:
+        &quot;string&quot;
+
+}</content><expected></expected></step>
+<step>
+<index>4</index><content>Then: User should receive message with valid logins status
+
+{
+    &quot;id&quot;: ,
+    &quot;username&quot;: &quot; &quot;,
+    &quot;first_name&quot;: &quot; &quot;,
+    &quot;last_name&quot;: &quot; &quot;,
+    &quot;email&quot;: &quot; &quot;,
+    &quot;date_joined&quot;: &quot; &quot;
+}</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2386</id>
+				<title>Bearer/JWT token authentication.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>Given: User has opened endpoint &apos;https://test-api.k6.io/auth/cookie/login/&apos; in Postman</content><expected></expected></step>
+<step>
+<index>2</index><content>When: User executes POST request to the given endpoint</content><expected></expected></step>
+<step>
+<index>3</index><content>And: User attaches a body of JSON  with the actual credentials:
+
+{
+    &quot;username&quot;: 
+        &quot;string&quot;
+    ,
+    &quot;password&quot;: 
+        &quot;string&quot;
+
+}
+</content><expected></expected></step>
+<step>
+<index>4</index><content>Then: User should receive message with valid token status: 
+
+{
+    &quot;refresh&quot;: &quot; &quot;,
+    &quot;access&quot;: &quot; &quot;
+}
+</content><expected></expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Private APIs</name>
+		<description>https://test-api.k6.io/</description>
+						<cases>
+												<case>
+				<id>C2387</id>
+				<title>List all your crocodiles</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2388</id>
+				<title>Get a single crocodile.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2389</id>
+				<title>Create a new crocodile</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2390</id>
+				<title>Update your crocodile.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2391</id>
+				<title>Update selected fields on your crocodile</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C2392</id>
+				<title>Remove your crocodile.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+	</sections>
+</suite>
