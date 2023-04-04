@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>QA Studio ( Russian version of the website, but the test cases are in English)</name>
+		<description>Hi!
+
+The full list of test cases for (https://test.qa.studio/) written by me can be found here: https://goo.su/Ysgs4 
+
+Here I just want to demonstrate my skills in working with this program. The first 5 test cases have been added, and I kindly ask you to disregard the lack of folder separation (it will be done later). 
+
+Thank you for your attention!</description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Typo for &apos;часто задаваемые вопросы&apos; for title</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate>600</estimate>
+																								<references>JIRA TICKET</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>https://test.qa.studio/  </preconds>
+										<steps>1. Open https://test.qa.studio/ in supported browser
+2. Click on the link &quot;&quot;Часто задавамые вопросы&quot;&quot; in the header menu.
+3. Check the name of the title on the loaded page</steps>
+										<expected>the name of the tab should be &quot;Часто задаваемые вопросы&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Collapsing problem in dropdown menu in &apos;часто задаваемые вопросы&apos; section</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Open https://test.qa.studio/</preconds>
+										<steps>1. Open https://test.qa.studio/
+2. Click on the tab &quot;&quot;Часто задавамые вопросы&quot;&quot;
+3. Press the arrow button that is located next to the label: Какие сроки выполнения заказа?</steps>
+										<expected>When you click on the arrow button, the menu should collapse</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Collapsing problem in dropdown menu in &apos;часто задаваемые вопросы&apos; section</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Open https://test.qa.studio/
+2. Click on the tab &quot;&quot;Часто задавамые вопросы&quot;&quot;
+3. Press the arrow button that is located next to the label: можно ли поставить доп.фурнитуру? </steps>
+										<expected>When you click on the arrow button, the menu should expand</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Not clickable button in &apos;отправить сообщение&apos; section</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>https://test.qa.studio/</preconds>
+										<steps>1. Open https://test.qa.studio/
+2. Click on the tab &quot;&quot;Контакты&quot;&quot; 
+3. Enter valid values in the input fields
+4. Click on the button &quot;&quot;Отправить сообщение&quot;</steps>
+										<expected>The button &quot;Отправить сообщение&quot;is not clickable.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Все категории&apos; dropdown menu is not clickable</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Purchase button is missing on the product card</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>There is no animation when selecting a value from the dropdown menu in the filter section.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>When changing the product sorting to &quot;сортировка по популярности&quot;, it is not clickable</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Not clickable button in &apos;Распродажа товаров&apos;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>The filter incorrectly displays values when selecting the &quot;Интерьер&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C11</id>
+				<title>The filter incorrectly displays values when selecting the &quot;Кресло&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>The filter incorrectly displays values when selecting the &quot;Подвесные светильники&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>The filter does not display the specified values</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>The filter does not display the specified values</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C15</id>
+				<title>The filter does not display the specified values</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>Not clickable button in &apos;Filter&apos; section</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C17</id>
+				<title>Not clickable button  &apos;Купить сейчас&apos; on the main page</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C18</id>
+				<title>Not clickable button &quot;политика конфиденциальности&quot; in footer section</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C19</id>
+				<title>The inability to remove an item from the wishlist</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C20</id>
+				<title>Removing items from the wishlist</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C21</id>
+				<title>Not clickable button &quot;оплата и доставка&quot; in footer section</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C22</id>
+				<title>Not clickable phone nubmer in &quot;Контакты&quot; section</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C23</id>
+				<title>Typo for &apos;Оформение заказа&apos; for title</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C24</id>
+				<title>Checking an input field with invalid credentials</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
